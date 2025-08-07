@@ -61,15 +61,30 @@
       text-align: left;
     }
 
+    #music-toggle {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      font-size: 18px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #audioWrapper {
+      display: none;
+      margin-top: 15px;
+    }
+
+    #audioWrapper audio {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+    }
   </style>
 </head>
 <body>
-
-    
-<audio controls autoplay loop>
-  <source src="사라지네 (Vocal. 그레고르).mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
   <header>
     <img src="https://img1.picmix.com/output/stamp/normal/9/0/7/7/2537709_dfeae.png" width="200">
@@ -98,18 +113,29 @@
         var pro = 10 * p;
         var quo = 10 / q;
 
-        document.write("<strong>Your sum: " + sum + "<br>");
-        document.write("<strong>Your difference: " + dif + "<br>");
-        document.write("<strong>Your product: " + pro + "<br>");
-        document.write("<strong>Your quotient: " + quo + "<br>");
+        document.write("Your Sum: " + sum + "<br>");
+        document.write("Your Difference: " + dif + "<br>");
+        document.write("Your Product: " + pro + "<br>");
+        document.write("Your Quotient: " + quo + "<br>");
       </script>
     </div>
   </div>
-   
-  
 
+  <div style="width: 100%; text-align: center; margin-top: 50px;">
+    <button id="music-toggle" onclick="togglePlayer()">Cockroach Music</button>
+    <div id="audioWrapper">
+      <audio controls autoplay loop>
+        <source src="사라지네 (Vocal. 그레고르).mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    function togglePlayer() {
+      const player = document.getElementById("audioWrapper");
+      player.style.display = player.style.display === "none" ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
-
-
