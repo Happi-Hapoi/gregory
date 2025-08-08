@@ -51,7 +51,7 @@
       background: linear-gradient(to bottom right, #000000, #000000);
       padding: 40px;
       border: 5px solid #ffffff;
-      font-size: 69px;
+      font-size: 60px;
       color: #ffffff;
       border-radius: 20px;
       box-shadow: -15px 15px 30px rgba(255, 255, 255, 0.6);
@@ -103,20 +103,24 @@
     
     <div class="right">
       <script type="text/javascript">
-        var s = parseInt(prompt("10 + --> Enter Your Number <--"));
-        var d = parseInt(prompt("10 - --> Enter Your Number <--"));
-        var p = parseInt(prompt("10 x --> Enter Your Number <--"));
-        var q = parseInt(prompt("10 ÷ --> Enter Your Number <--"));
+        var s = parseInt(prompt("--> Enter Your 1st Sum Number <--"));
+        var sm = parseInt(prompt("--> Enter Your 2nd Sum Number <--"));
+        var d = parseInt(prompt("--> Enter Your 1st Difference Number <--"));
+        var dh = parseInt(prompt("--> Enter Your 2nd Difference Number <--"));
+        var p = parseInt(prompt("--> Enter Your 1st Product Number <--"));
+        var pd = parseInt(prompt("--> Enter Your 2nd Product Number <--"));
+        var q = parseInt(prompt("--> Enter Your 1st Quotient Number <--"));
+        var qt = parseInt(prompt("--> Enter Your 2nd Quotient Number <--"));
 
-        var sum = 10 + s;
-        var dif = 10 - d;
-        var pro = 10 * p;
-        var quo = 10 / q;
+        var sum = s + sm;
+        var dif = d - dh;
+        var pro = p * pd;
+        var quo = q / qt;
 
-        document.write("Your Sum: " + sum + "<br>");
-        document.write("Your Difference: " + dif + "<br>");
-        document.write("Your Product: " + pro + "<br>");
-        document.write("Your Quotient: " + quo + "<br>");
+        document.write("Your Sum of "+ s + " and " + sm + " is " + sum + "<br>");
+        document.write("Your Difference of "+ d + " and " + dh + " is " + dif + "<br>");
+        document.write("Your Product of "+ p + " and " + pd + " is " + pro + "<br>");
+        document.write("Your Quotient of "+ q + " and " + qt + " is " + quo + "<br>");
       </script>
     </div>
   </div>
